@@ -21,29 +21,37 @@ const Features = () => {
       icon: <Users className="h-6 w-6 text-violet-600" />,
     },
     {
-        title:"File Attachments",
-        description:"Attach files to tasks and projects for easy access.",
-        icon:""
+      title: "File Attachments",
+      description: "Attach files to tasks and projects for easy access.",
+      icon: "",
     },
     {
-        title:"Project Notes",
-        description:"Add notes to projects and tasks for better context.",
-        icon:""
+      title: "Project Notes",
+      description: "Add notes to projects and tasks for better context.",
+      icon: "",
     },
     {
-        title:"Secure Authentication",
-        description:"Secure login and authentication for your team.",
-        icon:""
-    }
+      title: "Secure Authentication",
+      description: "Secure login and authentication for your team.",
+      icon: "",
+    },
   ];
 
   return (
     <section className="py-24">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center">Everything You Need</h2>
+        <div className="flex justify-center">
+          <span className="rounded-full bg-violet-100 px-4 py-2 text-sm font-medium text-violet-700">
+            Features
+          </span>
+        </div>
+        <h2 className="mt-6 text-center text-4xl font-extrabold tracking-tight lg:text-5xl">
+          Everything You Need
+        </h2>
 
-        <p className="text-center text-gray-500 mt-4">
-          Powerful tools to manage projects from start to finish.
+        <p className="mx-auto mt-5 max-w-2xl text-center text-lg text-gray-600 leading-8">
+          Powerful tools to manage projects from planning to deployment, all in
+          one collaborative workspace.
         </p>
 
         {/* Features Displaying */}
@@ -52,27 +60,32 @@ const Features = () => {
             return (
               <Card
                 key={feature.title}
-                className="
-                                 rounded-3xl
-                                border
-                                shadow-sm
-                                hover:shadow-2xl
-                                hover:-translate-y-2
-                                transition-all
-                                duration-300
-                                cursor-pointer
-                                "
+                className="group rounded-3xl border shadow-sm
+                            transition-all
+                            duration-300
+                            hover:-translate-y-3
+                            hover:shadow-2xl
+                            "
               >
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-xl bg-violet-100 flex items-center justify-center mb-5">
+                <CardHeader className="pb-2">
+                  <div
+                    className="w-14 h-14 rounded-2xl bg-violet-100 flex items-center justify-center
+            mb-5
+                    transition-transform
+                    duration-300
+                    group-hover:scale-110"
+
+                  >
                     {feature.icon}
                   </div>
 
                   <CardTitle className="text-xl">{feature.title}</CardTitle>
                 </CardHeader>
 
-                <CardContent>
-                  <p className="text-gray-600 leading-7">{feature.description}</p>
+                <CardContent className="pt-0">
+                  <p className="text-gray-600 leading-7">
+                    {feature.description}
+                  </p>
                 </CardContent>
               </Card>
             );
