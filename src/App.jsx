@@ -4,6 +4,8 @@ import Hero from "./components/landing/Hero";
 import Features from "./components/landing/Features";
 import DashboardPreview from "./components/landing/Dashboardpreview";
 import ProductShowCase from "./components/landing/ProductShowCase";
+import HowItWorks from "./components/landing/HowitWorks";
+import Faq from "./components/landing/Faq";
 
 
 function App() {
@@ -14,6 +16,8 @@ function App() {
     <Features />
     {/* <DashboardPreview expanded={true} /> */}
     <ProductShowCase />
+    <HowItWorks />
+    <Faq />
     </>
   )
 }
