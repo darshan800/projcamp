@@ -8,7 +8,7 @@ import HowItWorks from "./components/landing/HowitWorks";
 import Faq from "./components/landing/Faq";
 import Cta from "./components/landing/Cta";
 import Footer from "./components/layout/Footer";
-
+import LoginPage from "./pages/auth/LoginPage";
 
 function App() {
   return (
@@ -22,6 +22,7 @@ function App() {
     <Faq />
     <Cta />
     <Footer />
+    <LoginPage />
     </>
   )
 }

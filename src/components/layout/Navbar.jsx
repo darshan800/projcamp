@@ -16,7 +16,10 @@ const Navbar = () => {
             alt="Logo"
             className="h-10 w-10 rounded-lg object-cover"
           />
-          <h1 className="text-xl font-bold">ProjectCamp</h1>
+          <h1 className="text-xl font-bold">
+            Project
+            <span className="text-xl font-bold text-violet-500">Camp</span>
+          </h1>
         </div>
 
         {/* Desktop Navigation */}
@@ -34,10 +37,7 @@ const Navbar = () => {
         </nav>
 
         {/* Mobile Button */}
-        <button
-          className="lg:hidden"
-          onClick={() => setIsOpen(!isOpen)}
-        >
+        <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
@@ -46,17 +46,21 @@ const Navbar = () => {
       {isOpen && (
         <div className="lg:hidden border-t bg-white">
           <div className="flex flex-col px-6 py-5 space-y-4">
-            <a href="#" className="hover:text-violet-600">Features</a>
-            <a href="#" className="hover:text-violet-600">About</a>
-            <a href="#" className="hover:text-violet-600">Contact</a>
+            <a href="#" className="hover:text-violet-600">
+              Features
+            </a>
+            <a href="#" className="hover:text-violet-600">
+              About
+            </a>
+            <a href="#" className="hover:text-violet-600">
+              Contact
+            </a>
 
             <Button variant="outline" className="w-full">
               Login
             </Button>
 
-            <Button className="w-full">
-              Get Started
-            </Button>
+            <Button className="w-full">Get Started</Button>
           </div>
         </div>
       )}
